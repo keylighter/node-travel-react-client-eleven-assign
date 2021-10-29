@@ -10,6 +10,10 @@ import {
 } from "react-router-dom";
 import Footer from './component/Footer/Footer';
 import Header from './component/Header/Header';
+import Notfound from './component/Notfound/Notfound';
+import Login from './component/Login/Login';
+import Register from './component/Register/Register';
+
 
 function App() {
   return (
@@ -17,11 +21,21 @@ function App() {
 
       <Router>
         <Switch>
-          <Route path='/'>
+          <Route exact path='/'>
             <Header></Header>
             <Footer></Footer>
           </Route>
+          <Route path='/login'>
+            <Login></Login>
+          </Route>
+          <Route path='/register'>
+            <Register></Register>
+          </Route>
 
+
+          <Route path='*'>
+            <Notfound></Notfound>
+          </Route>
         </Switch>
       </Router>
 

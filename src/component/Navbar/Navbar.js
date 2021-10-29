@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
         <div>
-            <nav className='d-flex justify-content-between align-items-center ps-4 pe-4 pt-2 pb-2 ' >
+            <nav className='d-flex justify-content-between align-items-center ps-4 pe-4 pt-1 pb-1 ' >
                 <div>
                     <Link to='' className='text-decoration-none text-dark'>
                         <a class=" d-flex align-items-center" href="#">
@@ -30,10 +30,12 @@ const Navbar = () => {
                     <Link to='' className=' text-decoration-none fw-bold fs-6'>
                         <p className='pe-3 pt-2 nav-text'>Offer</p>
                     </Link>
-                    <Link to='' className='text-decoration-none fw-bold fs-6'>
+                    <Link to='/login' className='text-decoration-none fw-bold fs-6'>
                         <p className='pe-3 pt-2 nav-text'>Login</p>
                     </Link>
-                    <button className='btn  me-2 nav-button'><FontAwesomeIcon icon={faUser} />   Register</button>
+                    <Link to='/register'>
+                        <button className='btn  me-2 nav-button'><FontAwesomeIcon icon={faUser} />   Register</button>
+                    </Link>
                     <button className='btn   nav-button'>  Admin</button>
                 </div>
             </nav>
