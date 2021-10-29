@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
 import './Header.css'
 
 const Header = () => {
     return (
         <div>
             <div className="header row d-flex  align-items-center justify-content-center">
-
+                <Navbar></Navbar>
                 <div className="col-md-6">
                     <h1 className="title fw-bold text-white text-center">
                         Travel With Us

@@ -1,0 +1,11 @@
+.nav-text{
+    color: #ffebea;
+}
+.nav-text:hover{
+    color: #f56960;
+}
+
+.nav-button{
+    background-color: #f56960;
+    color: #ffebea;
+}
