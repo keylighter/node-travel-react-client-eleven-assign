@@ -1,0 +1,46 @@
+.icon {
+    margin: 5px;
+    padding: 5px;
+    /* background-color: rgb(46, 46, 46); */
+    /* border-radius: 5px; */
+    color: #f56960;
+    font-size: 30px;
+  }
+  .icon:hover {
+    background-color: #f56960;
+    color:#191919 ;
+  }
+  .footer-menu {
+    list-style: none;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .footer-menu:hover {
+    color: #f56960;
+  }
+  .footer-input {
+    padding: 8px;
+    border: 1px solid #f56960;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f8f8f8;
+  }
+  .footer-container {
+    background-color: #404040;
+    padding: 50px;
+    color: rgb(216, 209, 209);
+  }
+  .foot-icon {
+    font-size: 15px;
+    color: #f56960;
+  }
+
+  .foot-title {
+      text-decoration: none;
+      color: #d8d1d1;
+  }
+
+  .foot-span{
+      color : #f56960;
+  }

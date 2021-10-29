@@ -1,0 +1,20 @@
+.header {
+    background-image: url("https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  height: 500px;
+  width: 100%;
+  margin-right: 0%;
+  padding-right: 10px;
+  border: 1px solid red;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.head-button{
+    padding : 15px 32px;
+    border-radius: 10px;
+    background-color: #f56960;
+    color: azure;
+}
