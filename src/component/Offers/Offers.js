@@ -8,7 +8,7 @@ const Offers = () => {
     // Heroku - https://blooming-wave-96355.herokuapp.com/
 
     useEffect(() => {
-        fetch('http://localhost:5000/offers')
+        fetch('https://blooming-wave-96355.herokuapp.com/offers')
             .then(res => res.json())
             .then(data => setOffers(data));
     }, [])

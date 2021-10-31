@@ -11,12 +11,12 @@ const AddNewOffer = () => {
         e.preventDefault();
         alert('New Product Added!!');
         const name = (nameRef.current.value);
-        const image = (nameRef.current.value);
-        const description = (nameRef.current.value);
+        const image = (imageRef.current.value);
+        const description = (descriptionRef.current.value);
 
         const newOffer = { name: name, image: image, description: description }
 
-        fetch('http://localhost:5000/offers', {
+        fetch('https://blooming-wave-96355.herokuapp.com/offers', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
