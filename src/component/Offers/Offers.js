@@ -5,6 +5,8 @@ const Offers = () => {
 
     const [offers, setOffers] = useState([]);
 
+    // Heroku - https://blooming-wave-96355.herokuapp.com/
+
     useEffect(() => {
         fetch('http://localhost:5000/offers')
             .then(res => res.json())
