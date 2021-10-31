@@ -34,17 +34,41 @@ const Navbar = () => {
                     <Link to='/offers' className=' text-decoration-none fw-bold fs-6'>
                         <p className='pe-3 pt-2 nav-text'>Offers</p>
                     </Link>
-                    <Link to='/login' className='text-decoration-none fw-bold fs-6'>
-                        <p className='pe-3 pt-2 nav-text'>Login</p>
-                    </Link>
-                    <Link to='' className='text-decoration-none fw-bold fs-6'>
-                        <p className='pe-3 pt-2 nav-text'>Admin</p>
-                    </Link>
+                    {
+                        user.email &&
+                        <Link to='' className='text-decoration-none fw-bold fs-6'>
+                            <p className='pe-3 pt-2 nav-text'>Admin</p>
+                        </Link>
+                    }
+                    {
+                        user.email &&
+
+                        <Link to='' className='text-decoration-none fw-bold fs-6'>
+                            <p className='pe-3 pt-2 nav-text'>My Plans</p>
+                        </Link>
+                    }
+                    {
+                        user.email &&
+
+                        <Link to='' className='text-decoration-none fw-bold fs-6'>
+                            <p className='pe-3 pt-2 nav-text'>Add New Offering</p>
+                        </Link>
+                    }
+
+                    {
+                        !user.email &&
+                        <Link to='/login' className='text-decoration-none fw-bold fs-6'>
+                            <p className='pe-3 pt-2 nav-text'>Login</p>
+                        </Link>
+                    }
+
                     {user.email && <span className='me-2' style={{ color: 'white' }}>Hello {user.displayName} </span>}
 
                     {
                         user.email ?
+
                             <button className='btn  me-2 nav-button' onClick={logOut}>log out</button>
+
                             :
                             <Link to='/register'>
                                 <button className='btn  me-2 nav-button'><FontAwesomeIcon icon={faUser} />   Register</button>
