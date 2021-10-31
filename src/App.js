@@ -21,6 +21,7 @@ import Home from './component/Home/Home';
 
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
 import Booking from './component/Booking/Booking';
+import AddNewOffer from './component/AddNewOffer/AddNewOffer';
 
 
 function App() {
@@ -62,6 +63,11 @@ function App() {
             <PrivateRoute path='/booking'>
               <Header></Header>
               <Booking></Booking>
+              <Footer></Footer>
+            </PrivateRoute>
+            <PrivateRoute path='/addoffer'>
+              <Header></Header>
+              <AddNewOffer></AddNewOffer>
               <Footer></Footer>
             </PrivateRoute>
 

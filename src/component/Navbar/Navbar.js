@@ -50,8 +50,8 @@ const Navbar = () => {
                     {
                         user.email &&
 
-                        <Link to='' className='text-decoration-none fw-bold fs-6'>
-                            <p className='pe-3 pt-2 nav-text'>Add New Offering</p>
+                        <Link to='/addoffer' className='text-decoration-none fw-bold fs-6'>
+                            <p className='pe-3 pt-2 nav-text'>Add New Offers</p>
                         </Link>
                     }
 
