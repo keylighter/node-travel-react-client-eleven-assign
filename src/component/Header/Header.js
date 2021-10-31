@@ -22,7 +22,7 @@ const Header = () => {
                     <Link to='/about'>
                         <button className="mt-3 head-button me-3">About Us</button>
                     </Link>
-                    <Link to='/register'>
+                    <Link to='/booking'>
                         <button className="mt-3 head-button ms-3">Book Now</button>
                     </Link>
                 </div>

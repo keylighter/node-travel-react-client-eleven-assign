@@ -19,6 +19,9 @@ import Offers from './component/Offers/Offers';
 import Detail from './component/Detail/Detail';
 import Home from './component/Home/Home';
 
+import PrivateRoute from './component/PrivateRoute/PrivateRoute';
+import Booking from './component/Booking/Booking';
+
 
 function App() {
   return (
@@ -51,11 +54,16 @@ function App() {
               <Offers></Offers>
               <Footer></Footer>
             </Route>
-            <Route path='/offers/detail/:id'>
+            <PrivateRoute path='/detail/:offerId'>
               <Header></Header>
               <Detail></Detail>
               <Footer></Footer>
-            </Route>
+            </PrivateRoute>
+            <PrivateRoute path='/booking'>
+              <Header></Header>
+              <Booking></Booking>
+              <Footer></Footer>
+            </PrivateRoute>
 
             <Route path='*'>
               <Notfound></Notfound>

@@ -12,10 +12,10 @@ const Offer = ({ offer }) => {
                     <h5 className="card-title fw-bold pt-3 w-75">{name}</h5>
                     <p className="card-text ms-3 me-3"> {description} </p>
                     <div className=' '>
-                        <Link to='/detail'>
+                        <Link to='/detail/:offerId'>
                             <button className='w-25 detail-button fw-bold'>See Detail</button>
                         </Link>
-                        <Link to=''>
+                        <Link to='/booking'>
                             <button className=' w-25 detail-button fw-bold'>Book Now</button>
                         </Link>
                     </div>
