@@ -14,31 +14,55 @@ import Notfound from './component/Notfound/Notfound';
 import Login from './component/Login/Login';
 import Register from './component/Register/Register';
 
+import AuthProvider from './context/AuthProvider';
+import Offers from './component/Offers/Offers';
+import Detail from './component/Detail/Detail';
+import Home from './component/Home/Home';
+
 
 function App() {
   return (
     <div >
+      <AuthProvider>
+        <Router>
+          <Switch>
+            <Route exact path='/'>
+              <Header></Header>
+              <Home></Home>
+              <Footer></Footer>
+            </Route>
+            <Route exact path='/home'>
+              <Header></Header>
+              <Home></Home>
+              <Footer></Footer>
+            </Route>
+            <Route path='/login'>
+              <Header></Header>
+              <Login></Login>
+              <Footer></Footer>
+            </Route>
+            <Route path='/register'>
+              <Header></Header>
+              <Register></Register>
+              <Footer></Footer>
+            </Route>
+            <Route path='/offers'>
+              <Header></Header>
+              <Offers></Offers>
+              <Footer></Footer>
+            </Route>
+            <Route path='/offers/detail/:id'>
+              <Header></Header>
+              <Detail></Detail>
+              <Footer></Footer>
+            </Route>
 
-      <Router>
-        <Switch>
-          <Route exact path='/'>
-            <Header></Header>
-            <Footer></Footer>
-          </Route>
-          <Route path='/login'>
-            <Login></Login>
-          </Route>
-          <Route path='/register'>
-            <Register></Register>
-          </Route>
-
-
-          <Route path='*'>
-            <Notfound></Notfound>
-          </Route>
-        </Switch>
-      </Router>
-
+            <Route path='*'>
+              <Notfound></Notfound>
+            </Route>
+          </Switch>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }

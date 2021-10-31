@@ -1,0 +1,22 @@
+.card{
+    background-color: #ffffff;
+}
+
+.offer-img{
+    height: 350px;
+
+}
+
+.detail-button{
+    margin: 4px;
+    padding: 5px 8px;
+    border-radius: 7px;
+    font-weight: 500;
+    color: azure;
+    background-color:   #f56960;
+}
+
+.detail-button:hover{
+    color:#f56960 ;
+    background-color: azure  ;
+}

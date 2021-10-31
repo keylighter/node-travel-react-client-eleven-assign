@@ -1,5 +1,18 @@
-.register-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.form{
+   
+    padding-top: 50px;
+    width: 1200px;
+    margin-left: 80px;
+}
+
+.button-submit{
+    padding : 7px  16px;
+    background-color: #f56960; 
+    color: azure;
+    font-weight: 500;
+}
+
+.icon{
+    font-size: 15px;
+    color: #f56960;
 }

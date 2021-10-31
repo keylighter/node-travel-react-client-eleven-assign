@@ -6,8 +6,12 @@ import './Navbar.css'
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 const Navbar = () => {
+
+    const { user, logOut } = useAuth();
+
     return (
         <div>
             <nav className='d-flex justify-content-between align-items-center ps-4 pe-4 pt-1 pb-1 ' >
@@ -24,22 +28,36 @@ const Navbar = () => {
                     <button type='submit' className='rounded-3 btn-primary'>Search</button>
                 </div> */}
                 <div className='  d-flex justify-content-end align-items-center gx-3'>
-                    <Link to='' className='text-decoration-none fw-bold fs-6 '>
+                    <Link to='/home' className='text-decoration-none fw-bold fs-6 '>
                         <p className='pe-3 pt-2 nav-text'>Home</p>
                     </Link>
-                    <Link to='' className=' text-decoration-none fw-bold fs-6'>
-                        <p className='pe-3 pt-2 nav-text'>Offer</p>
+                    <Link to='/offers' className=' text-decoration-none fw-bold fs-6'>
+                        <p className='pe-3 pt-2 nav-text'>Offers</p>
                     </Link>
                     <Link to='/login' className='text-decoration-none fw-bold fs-6'>
                         <p className='pe-3 pt-2 nav-text'>Login</p>
                     </Link>
-                    <Link to='/register'>
-                        <button className='btn  me-2 nav-button'><FontAwesomeIcon icon={faUser} />   Register</button>
+                    <Link to='' className='text-decoration-none fw-bold fs-6'>
+                        <p className='pe-3 pt-2 nav-text'>Admin</p>
                     </Link>
-                    <button className='btn   nav-button'>  Admin</button>
+                    {user.email && <span className='me-2' style={{ color: 'white' }}>Hello {user.displayName} </span>}
+
+                    {
+                        user.email ?
+                            <button className='btn  me-2 nav-button' onClick={logOut}>log out</button>
+                            :
+                            <Link to='/register'>
+                                <button className='btn  me-2 nav-button'><FontAwesomeIcon icon={faUser} />   Register</button>
+                            </Link>
+
+                    }
+                    {/* <Link to='/register'>
+                        <button className='btn  me-2 nav-button'><FontAwesomeIcon icon={faUser} />   Register</button>
+                    </Link> */}
+                    {/* <button className='btn   nav-button'>  Admin</button> */}
                 </div>
-            </nav>
-        </div>
+            </nav >
+        </div >
     );
 };
 
