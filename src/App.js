@@ -22,6 +22,7 @@ import Home from './component/Home/Home';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
 import Booking from './component/Booking/Booking';
 import AddNewOffer from './component/AddNewOffer/AddNewOffer';
+import AboutUs from './component/AboutUs/AboutUs';
 
 
 function App() {
@@ -68,6 +69,11 @@ function App() {
             <PrivateRoute path='/addoffer'>
               <Header></Header>
               <AddNewOffer></AddNewOffer>
+              <Footer></Footer>
+            </PrivateRoute>
+            <PrivateRoute path='/about'>
+              <Header></Header>
+              <AboutUs></AboutUs>
               <Footer></Footer>
             </PrivateRoute>
 
